@@ -11,34 +11,46 @@ min_rev = 0
 monthly_change = 0
 
 #create lists
-month = []
+dates = []
 revenue = []
-avg_Chnage = []
 
 #location of resources
 data_csv = os.path.join("Resources", "budget_data.csv")
 with open(data_csv) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
 
-#Find headers
+#Read headers
     csv_header = next(csvreader)
-    firstrow = next(csvreader) 
-    rowbefore = (int(firstrow[1]))
 
-    revenue.append(int(firstrow[1]))
+#Read First Row
+    firstrow = next(csvreader) 
+    month_count += 1
+    net_revenue += int(firstrow[1])
+    profit = int(firstrow[1])
 
 #Create for loop to loop through data
     for row in csv_reader:
-        #count the months
-        month_count = month_count +1
+        
+        #add date to list
+        dates.append(row[0])
+        
+        #Add count for row to represent month
+        month_count += 1
 
-        #Revenue
-        revenue.append(row[1])
-        #month
-        month.append(row[0])
-        #Avg_change
-        avg_Chnage.append(row[1])
+        # Calc Profit/loss and add to list
+        monthly_change = int(row[1]-profit)
+        revenue.append(monthly_change)
+        profit = (int(row[1]))
 
-max_rev = revenue.max()
-min_rev = revenue.min()
-monthly_change = 
+        # Total Net Profit/Loss
+        net_revenue = net_revenue + int(row[1])
+
+#Greatest Profit
+max_rev = max(net_revenue)
+max_index = net_revenue.index(max_rev)
+Max_date = dates[max_index]
+
+#Greatest Loss
+min_rev = min(net_revenue)
+
+
