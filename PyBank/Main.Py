@@ -59,10 +59,29 @@ min_date = dates[min_index]
 avg_profit = sum(revenue)/len(revenue)
 
 #Print results
-print("Financial Analysis")
-print("---------------------------")
-print(f"Total: ${str(month_count)}")
-print(f"Total: ${str(net_revenue)}")
-print(f"Greatest Increase in Profits: {max_date} (${str(max_rev)})")
-print(f"Greatest Decrease in Profits: {min_date} (${str(min_rev)})")
+#print("Financial Analysis")
+#print("---------------------------")
+#print(f"Total: ${str(month_count)}")
+#print(f"Total: ${str(net_revenue)}")
+#print(f"Average Change: ${str(round(avg_profit,2))}")
+#print(f"Greatest Increase in Profits: {max_date} (${str(max_rev)})")
+#print(f"Greatest Decrease in Profits: {min_date} (${str(min_rev)})")
 
+#Setup output strings
+report= (
+f"Financial Analysis\n"
+f"---------------------------\n"
+f"Total: ${str(month_count)}\n"
+f"Total: ${str(net_revenue)}\n"
+f"Average Change: ${str(round(avg_profit,2))}\n"
+f"Greatest Increase in Profits: {max_date} (${str(max_rev)})\n"
+f"Greatest Decrease in Profits: {min_date} (${str(min_rev)})\n"
+)
+
+print(report)
+
+#Set output path
+output_txt = os.path.join('..','output.txt')
+#output file
+with open(output_txt, 'w') as txtfile:
+    txtwriter = txtfile.write(report)
