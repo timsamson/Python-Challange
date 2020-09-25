@@ -48,9 +48,21 @@ with open(data_csv) as csvfile:
 #Greatest Profit
 max_rev = max(net_revenue)
 max_index = net_revenue.index(max_rev)
-Max_date = dates[max_index]
+max_date = dates[max_index]
 
 #Greatest Loss
 min_rev = min(net_revenue)
+min_index = net_revenue.index(min_rev)
+min_date = dates[min_index]
 
+#Average Profti/Loss
+avg_profit = sum(net_revenue)/len(month_count)
+
+#Print results
+print("Financial Analysis")
+print("---------------------------")
+print(f"Total: ${str(month_count)}")
+print(f"Total: ${str(net_revenue)}")
+print(f"Greatest Increase in Profits: {max_date} (${str(max_rev)})")
+print(f"Greatest Decrease in Profits: {min_date} (${str(min_rev)})")
 
