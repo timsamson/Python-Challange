@@ -46,17 +46,17 @@ with open(data_csv) as csvfile:
         net_revenue = net_revenue + int(row[1])
 
 #Greatest Profit
-max_rev = max(net_revenue)
-max_index = net_revenue.index(max_rev)
+max_rev = max(revenue)
+max_index = revenue.index(max_rev)
 max_date = dates[max_index]
 
 #Greatest Loss
-min_rev = min(net_revenue)
-min_index = net_revenue.index(min_rev)
+min_rev = min(revenue)
+min_index = revenue.index(min_rev)
 min_date = dates[min_index]
 
 #Average Profti/Loss
-avg_profit = sum(net_revenue)/len(month_count)
+avg_profit = sum(revenue)/len(revenue)
 
 #Print results
 print("Financial Analysis")
