@@ -29,26 +29,25 @@ with open(data_csv) as csvfile:
             candidates.append(row[2])
             index = candidates.index (row[2])
             cand_votes.append(1)
+        
+            total_votes = total_votes + 1
+
         else:
             index = candidates.index(row[2])
             cand_votes[index] +=1
 
         #add vote for row to running count
-        total_votes = total_votes + 1
+            total_votes = total_votes + 1
 
 #Calculate percentage of total votes for each candidate
 for votes in cand_votes:
-    percent =round((votes/total_votes) *100, 2)
+    percent =round((votes/total_votes) *100, 3)
     percent_votes.append(percent)
 
 #Find Winning Candidate
 winner = max(cand_votes)
-index = cand_votes.index(winner)
-winning_cand = candidates[index]
-
-print(candidates)
-print(cand_votes)
-print(percent_votes)
+cand_index = cand_votes.index(winner)
+winning_cand = candidates[cand_index]
 
 #format results
 Results=(
@@ -56,17 +55,17 @@ Results=(
     f"-------------------------\n"
     f"Total Votes: {total_votes}\n"
     f"-------------------------\n"
- # for loop fpor list of winners
     f"{candidates[0]}: {str(percent_votes[0])}% ({str(cand_votes[0])}\n"
     f"{candidates[1]}: {str(percent_votes[1])}% ({str(cand_votes[1])}\n"
     f"{candidates[2]}: {str(percent_votes[2])}% ({str(cand_votes[2])}\n"
     f"{candidates[3]}: {str(percent_votes[3])}% ({str(cand_votes[3])}\n"
-
     f"-------------------------\n"
     f"Winner: {winning_cand}\n"
     f"-------------------------\n"
-
 )
 
 #print reults
 print(Results)
+
+#output results
+
