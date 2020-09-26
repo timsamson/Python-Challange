@@ -56,8 +56,12 @@ Results=(
     f"-------------------------\n"
     f"Total Votes: {total_votes}\n"
     f"-------------------------\n"
-    for index, name in candidates:
-        (f"{candidates[count]}: {percent_votes[count]}% ({cand_votes[count]})\n")
+ # for loop fpor list of winners
+    f"{candidates[0]}: {str(percent_votes[0])}% ({str(cand_votes[0])}\n"
+    f"{candidates[1]}: {str(percent_votes[1])}% ({str(cand_votes[1])}\n"
+    f"{candidates[2]}: {str(percent_votes[2])}% ({str(cand_votes[2])}\n"
+    f"{candidates[3]}: {str(percent_votes[3])}% ({str(cand_votes[3])}\n"
+
     f"-------------------------\n"
     f"Winner: {winning_cand}\n"
     f"-------------------------\n"
