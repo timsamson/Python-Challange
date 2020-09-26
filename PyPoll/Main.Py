@@ -38,7 +38,7 @@ with open(data_csv) as csvfile:
 
 #Calculate percentage of total votes for each candidate
 for votes in cand_votes:
-    percent =(votes/total_votes)
+    percent =round((votes/total_votes) *100, 2)
     percent_votes.append(percent)
 
 #Find Winning Candidate
