@@ -55,6 +55,7 @@ Results=(
     f"-------------------------\n"
     f"Total Votes: {total_votes}\n"
     f"-------------------------\n"
+    #list candidates | % of votes | Total votes
     f"{candidates[0]}: {str(percent_votes[0])}% ({str(cand_votes[0])})\n"
     f"{candidates[1]}: {str(percent_votes[1])}% ({str(cand_votes[1])})\n"
     f"{candidates[2]}: {str(percent_votes[2])}% ({str(cand_votes[2])})\n"
