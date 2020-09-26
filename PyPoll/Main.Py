@@ -6,7 +6,7 @@ import csv
 total_votes = 0
 candidates =[]
 cand_count = 0
-cand_count = []
+cand_votes = []
 percent_votes = []
 
 
@@ -23,9 +23,6 @@ with open(data_csv) as csvfile:
 
 #Create a lopop to read the voting data
     for row in csv_reader:
-        
-        #add candidate to list
-        votes.append(row[2])
 
         #Add to unique list
         if row[2] not in candidates:
@@ -37,11 +34,11 @@ with open(data_csv) as csvfile:
             cand_votes[index] +=1
 
         #add vote for row to running count
-        total_votes = total_votes += 1
+        total_votes = total_votes + 1
 
 #Calculate percentage of total votes for each candidate
 for votes in cand_votes:
-    percent = round(votes/total_votes) = 100
+    percent = round(votes/total_votes)
     percent_votes.append(percent)
 
 #Find Winning Candidate
