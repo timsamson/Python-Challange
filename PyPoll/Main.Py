@@ -1,13 +1,13 @@
 #import Modules
 import os
 import csv
-import numpy as np
 
 # Define the variables
-votes = []
 total_votes = 0
 candidates =[]
 cand_count = 0
+cand_count = []
+percent_votes = []
 
 
 # Path of data file
@@ -21,22 +21,37 @@ with open(data_csv) as csvfile:
 #Read First Row
     firstrow = next(csv_reader) 
 
-
 #Create a lopop to read the voting data
     for row in csv_reader:
         
         #add candidate to list
         votes.append(row[2])
 
+        #Add to unique list
+        if row[2] not in candidates:
+            candidates.append(row[2])
+            index = candidates.index (row[2])
+            cand_votes.append(1)
+        else:
+            index = candidates.index(row[2])
+            cand_votes[index] +=1
+
         #add vote for row to running count
-        total_votes = total_votes + 1
+        total_votes = total_votes += 1
 
-# Unique candidate list
-#candidates = (votes).Unique
+#Calculate percentage of total votes for each candidate
+for votes in cand_votes:
+    percent = round(votes/total_votes) = 100
+    percent_votes.append(percent)
+
+#Find Winning Candidate
+winner = max(cand_votes)
+index = cand_votes.index(winner)
+winning_cand = candidates[index]
+
+print(winning_cand)
+
 print(total_votes)
-
-candidates = np.Unique([votes])
 print(candidates)
 
 # vote count
-#cand_count = ()
