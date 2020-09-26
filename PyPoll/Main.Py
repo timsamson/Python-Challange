@@ -41,7 +41,7 @@ with open(data_csv) as csvfile:
 
 #Calculate percentage of total votes for each candidate
 for votes in cand_votes:
-    percent =round((votes/total_votes) *100, 3)
+    percent ="{:.3f}".format((votes/total_votes)*100)
     percent_votes.append(percent)
 
 #Find Winning Candidate
@@ -55,10 +55,10 @@ Results=(
     f"-------------------------\n"
     f"Total Votes: {total_votes}\n"
     f"-------------------------\n"
-    f"{candidates[0]}: {str(percent_votes[0])}% ({str(cand_votes[0])}\n"
-    f"{candidates[1]}: {str(percent_votes[1])}% ({str(cand_votes[1])}\n"
-    f"{candidates[2]}: {str(percent_votes[2])}% ({str(cand_votes[2])}\n"
-    f"{candidates[3]}: {str(percent_votes[3])}% ({str(cand_votes[3])}\n"
+    f"{candidates[0]}: {str(percent_votes[0])}% ({str(cand_votes[0])})\n"
+    f"{candidates[1]}: {str(percent_votes[1])}% ({str(cand_votes[1])})\n"
+    f"{candidates[2]}: {str(percent_votes[2])}% ({str(cand_votes[2])})\n"
+    f"{candidates[3]}: {str(percent_votes[3])}% ({str(cand_votes[3])})\n"
     f"-------------------------\n"
     f"Winner: {winning_cand}\n"
     f"-------------------------\n"
