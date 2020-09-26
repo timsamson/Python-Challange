@@ -46,9 +46,19 @@ winner = max(cand_votes)
 index = cand_votes.index(winner)
 winning_cand = candidates[index]
 
-print(winning_cand)
+#format results
+Results=(
+    f"Election Results\n"
+    f"-------------------------\n"
+    f"Total Votes: {total_votes}\n"
+    f"-------------------------\n"
+    f"{[candidates]}\n"
 
-print(total_votes)
-print(candidates)
+    f"-------------------------\n"
+    f"Winner: {winning_cand}\n"
+    f"-------------------------\n"
 
-# vote count
+)
+
+#print reults
+print(Results)
