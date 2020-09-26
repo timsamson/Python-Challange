@@ -38,7 +38,7 @@ with open(data_csv) as csvfile:
 
 #Calculate percentage of total votes for each candidate
 for votes in cand_votes:
-    percent = round(votes/total_votes)
+    percent =(votes/total_votes)
     percent_votes.append(percent)
 
 #Find Winning Candidate
@@ -46,14 +46,18 @@ winner = max(cand_votes)
 index = cand_votes.index(winner)
 winning_cand = candidates[index]
 
+print(candidates)
+print(cand_votes)
+print(percent_votes)
+
 #format results
 Results=(
     f"Election Results\n"
     f"-------------------------\n"
     f"Total Votes: {total_votes}\n"
     f"-------------------------\n"
-    f"{[candidates]}\n"
-
+    for index, name in candidates:
+        (f"{candidates[count]}: {percent_votes[count]}% ({cand_votes[count]})\n")
     f"-------------------------\n"
     f"Winner: {winning_cand}\n"
     f"-------------------------\n"
