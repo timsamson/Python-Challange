@@ -67,5 +67,10 @@ Results=(
 #print reults
 print(Results)
 
-#output results
+#Set output path
+output_txt = os.path.join('Election_Results.txt')
 
+#output file
+with open(output_txt, 'w') as txtfile:
+    txtwriter = txtfile.write(Results)
+    txtfile.close()
