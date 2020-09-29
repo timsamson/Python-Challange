@@ -6,11 +6,11 @@ Python Homework for Bootcamp.There are two respectiove folders, Main.py will pul
 Resources and python code to perform required tasks.
 <b>Main.Py</b> performs the fucntion and returns:
 
-<ul><li>total number of months</li>
-<li>total funds</li>
-<li>average change</li>
-<li>greatest increase in profiuts</li>
-  <li>greatest decrease in profits</li></ul>
+<ul><li>Total number of months</li>
+<li>Total funds</li>
+<li>Average change</li>
+<li>Greatest increase in profiuts</li>
+  <li>Greatest decrease in profits</li></ul>
 
 <h3>PyPoll</h3>
 Resources and python code to perform required tasks.
