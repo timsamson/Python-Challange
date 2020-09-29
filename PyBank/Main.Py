@@ -62,8 +62,8 @@ avg_profit = sum(revenue)/len(revenue)
 report= (
 f"Financial Analysis\n"
 f"---------------------------\n"
-f"Total: ${str(month_count)}\n"
-f"Total: ${str(net_revenue)}\n"
+f"Total Months: {str(month_count)}\n"
+f"Total Funds: ${str(net_revenue)}\n"
 f"Average Change: ${str(round(avg_profit,2))}\n"
 f"Greatest Increase in Profits: {max_date} (${str(max_rev)})\n"
 f"Greatest Decrease in Profits: {min_date} (${str(min_rev)})\n"
