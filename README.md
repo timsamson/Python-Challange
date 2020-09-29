@@ -10,7 +10,7 @@ Resources and python code to perform required tasks.
 <li>total funds</li>
 <li>average change</li>
 <li>greatest increase in profiuts</li>
-<li>greatest decrease in profits</li?</ul>
+  <li>greatest decrease in profits</li></ul>
 
 <h3>PyPoll</h3>
 Resources and python code to perform required tasks.
@@ -18,6 +18,7 @@ Resources and python code to perform required tasks.
 
 <ul><il>Total Votes</li>
 <li>Candidate breakdown with votes and percentage</li>
-<li>Election Winner</li>
+<li>Election Winner</li></ul>
+
 
 
