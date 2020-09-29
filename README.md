@@ -16,7 +16,7 @@ Resources and python code to perform required tasks.
 Resources and python code to perform required tasks.
 <b>Main.Py</b> performs vote counting and tallying:
 
-<ul><il>Total Votes</li>
+<ul><li>Total Votes</li>
 <li>Candidate breakdown with votes and percentage</li>
 <li>Election Winner</li></ul>
 
