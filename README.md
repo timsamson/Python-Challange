@@ -1,6 +1,6 @@
 # Python-Challange
 
-Python Homework for Bootcamp.
+Python Homework for Bootcamp.There are two respectiove folders, Main.py will pull resources from the respective paths within those folders.
 
 <h3>PyBank</h3>
 Resources and python code to perform required tasks.
